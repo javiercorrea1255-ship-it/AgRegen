@@ -1,10 +1,15 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite the version you used and its Zenodo DOI when available."
+message: "If you use this software, please cite the archived version using its Zenodo DOI."
 type: software
 title: "AgRegen: open-source web platform for site-specific nutrient management"
 version: "1.1.0"
 license: MIT
 repository-code: "https://github.com/javiercorrea1255-ship-it/AgRegen"
+doi: "10.5281/zenodo.24454203"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.24454203"
+    description: "Zenodo archive for AgRegen v1.1.0"
 authors:
   - family-names: "Correa Islas"
     given-names: "Javier de Jesús"

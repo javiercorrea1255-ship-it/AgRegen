@@ -1,5 +1,7 @@
 # AgRegen: open-source web platform for site-specific nutrient management
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24454203.svg)](https://doi.org/10.5281/zenodo.24454203)
+
 AgRegen is a Spanish-language platform for defining management zones from satellite imagery or georeferenced soil samples, developing variable-rate prescriptions, and running soil amendment and crop nutrition calculations. This repository accompanies the SoftwareX submission and includes three cases that can be reproduced offline.
 
 ## Architecture
@@ -87,6 +89,6 @@ AgRegen organizes its source code by service rather than in a single top-level `
 
 Code is licensed under [MIT](LICENSE). An identical copy is provided as [`LICENSE.txt`](LICENSE.txt) for SoftwareX. The datasets in `data/` are licensed separately under [CC BY 4.0](LICENSE-DATA). Third-party imagery, marks and dependencies retain their respective terms.
 
-Correa Islas, J. de J.; Muñoz Rodríguez, M.; Martínez González, E. G.; Altamirano Cárdenas, J. R.; and Ontiveros Capurata, R. E. (2026). *AgRegen: open-source web platform for site-specific nutrient management* (v1.1.0) [Software]. See [`CITATION.cff`](CITATION.cff).
+Correa Islas, J. de J.; Muñoz Rodríguez, M.; Martínez González, E. G.; Altamirano Cárdenas, J. R.; and Ontiveros Capurata, R. E. (2026). *AgRegen: open-source web platform for site-specific nutrient management* (v1.1.0) [Software]. Zenodo. [https://doi.org/10.5281/zenodo.24454203](https://doi.org/10.5281/zenodo.24454203).
 
-For a reproducible citation, use the **version DOI** assigned by Zenodo to the archived v1.1.0 release. No Zenodo DOI has been verified for v1.1.0; until one is available, cite the GitHub tag and the version above. [10.5281/zenodo.20062527](https://doi.org/10.5281/zenodo.20062527) identifies the earlier v1.0 submission, not v1.1.0.
+Use this **version DOI** to cite the archived v1.1.0 release. Machine-readable citation metadata is available in [`CITATION.cff`](CITATION.cff).

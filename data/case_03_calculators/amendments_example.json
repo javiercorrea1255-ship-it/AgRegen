@@ -1,0 +1,81 @@
+{
+  "description": "Soil amendments calculator — worked example for a strongly acidic soil (pH 4.43, representative of San José field average)",
+  "calculator": "AgRegen 5.0 Amendments Calculator (Enmiendas Químicas y Orgánicas)",
+  "reference": "Oseguera-Pérez et al. (2018); NOM-021-SEMARNAT-2000",
+  "input": {
+    "area_ha": 3.24,
+    "profundidad_cm": 30,
+    "densidad_aparente_t_m3": 1.3,
+    "pH": 4.43,
+    "CIC_meq_100g": 18.5,
+    "pct_Ca": 58.0,
+    "pct_Mg": 12.0,
+    "pct_K": 3.5,
+    "pct_Na": 1.0,
+    "pct_H": 20.0,
+    "pct_Al": 5.5,
+    "MO_pct": 1.2,
+    "soil_texture": "franco",
+    "targets": {
+      "Ca_pct": 68.0,
+      "Mg_pct": 15.0,
+      "K_pct": 5.0,
+      "Na_pct": 2.0,
+      "MO_pct": 3.0
+    }
+  },
+  "intermediate_calculations": {
+    "k_factor": "profundidad_cm × densidad_aparente = 30 × 1.3 = 39 (t/ha/meq·100g)",
+    "meq_Ca": "(58.0/100) × 18.5 = 10.73 meq/100g",
+    "meq_Mg": "(12.0/100) × 18.5 = 2.22 meq/100g",
+    "meq_K":  "(3.5/100) × 18.5 = 0.648 meq/100g",
+    "ratio_Ca_Mg": "10.73 / 2.22 = 4.83 (within optimal 2–6)",
+    "ratio_Mg_K": "2.22 / 0.648 = 3.43 (within optimal 2–3, slightly high)",
+    "cation_sum_pct": "58+12+3.5+1+20+5.5 = 100.0 % (balance OK)"
+  },
+  "diagnosis": {
+    "encalado": { "active": true, "reason": "pH = 4.43 < 5.5 (very acid)", "severity": "moderado" },
+    "carbono": { "active": true, "reason": "%MO = 1.2% < 1.6% critical threshold", "severity": "moderado" },
+    "potasio": { "active": true, "reason": "%K = 3.5% < 5% optimal", "severity": "leve" },
+    "magnesio": { "active": false, "reason": "Ca/Mg ratio within range" },
+    "sodio": { "active": false, "reason": "%Na = 1.0% < 5%" },
+    "azufre": { "active": false, "reason": "pH < 7.5 (not alkaline)" },
+    "overall_status": "deficiente",
+    "active_modules": 3
+  },
+  "amendments": {
+    "encalado": {
+      "product": "Cal agrícola (CaCO₃)",
+      "formula": "CaCO₃",
+      "delta_pct_Ca": 10.0,
+      "delta_meq": "(10.0/100) × 18.5 = 1.85 meq/100g",
+      "dose_kg_ha": "1.85 × 39 × 50.04 = 3,612 kg/ha",
+      "dose_ton_ha": 3.612,
+      "total_kg": "3,612 × 3.24 = 11,703 kg",
+      "total_ton": 11.703,
+      "notes": "Apply before tillage, incorporate to 30 cm. Recheck pH after 6 months."
+    },
+    "carbono": {
+      "product": "Compost (30% C)",
+      "delta_MO_pct": 1.8,
+      "soil_mass_t_ha": "(30/100) × 10000 × 1.3 = 3,900 t/ha",
+      "dose_ton_ha": "(1.8 × 0.58 × 3900) / 30 = 135.7 t/ha",
+      "total_ton": "135.7 × 3.24 = 439.7 t",
+      "notes": "High dose — consider fractioning over 3–5 years or using vermicompost with higher %C."
+    },
+    "potasio": {
+      "product": "Sulfato de potasio (K₂SO₄, 44% K)",
+      "delta_pct_K": 1.5,
+      "delta_meq": "(1.5/100) × 18.5 = 0.2775 meq/100g",
+      "dose_kg_ha": "0.2775 × 39 × 39.1 / 0.44 = 962 kg/ha",
+      "dose_ton_ha": 0.962,
+      "total_kg": "962 × 3.24 = 3,117 kg",
+      "total_ton": 3.117
+    }
+  },
+  "validation": {
+    "encalado_formula": "dose_kg_ha = delta_meq × k × MW_CaCO3/2 = 1.85 × 39 × 50.04 = 3,612 ✓",
+    "k_factor_formula": "k = depth_cm × bulk_density = 30 × 1.3 = 39 ✓",
+    "cation_balance": "58+12+3.5+1+20+5.5 = 100.0% — within ±5% tolerance ✓"
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "description": "Nutrition & biostimulation calculator — worked example for maize (Zea mays) under drip irrigation, 15 t/ha yield target",
+  "calculator": "AgRegen 5.0 Nutrition & Biostimulation Calculator",
+  "reference": "Oseguera y Sánchez (2015); NOM-021-SEMARNAT-2000",
+  "crop": "Maíz blanco grano (Zea mays L.)",
+  "input": {
+    "general": {
+      "rendimiento_meta_t_ha": 15,
+      "superficie_ha": 5.0,
+      "sistema_produccion": "fertirriego",
+      "moo_kgN_ha": 20
+    },
+    "soil": {
+      "profundidad_cm": 30,
+      "da_g_cm3": 1.35,
+      "mos_pct": 2.1,
+      "ph": 6.8,
+      "ce_dSm": 0.45,
+      "nInorg_ppm": 18,
+      "p_ppm": 8.5,
+      "k_ppm": 185,
+      "ca_ppm": 1420,
+      "mg_ppm": 210,
+      "s_ppm": 12,
+      "fe_ppm": 8.2,
+      "cu_ppm": 0.9,
+      "mn_ppm": 4.1,
+      "zn_ppm": 0.8,
+      "b_ppm": 0.3
+    },
+    "water": {
+      "ph": 7.2,
+      "ce_dSm": 0.62,
+      "ca_meq": 2.8,
+      "mg_meq": 1.1,
+      "k_meq": 0.15,
+      "na_meq": 0.9,
+      "no3_meq": 0.4,
+      "so4_meq": 1.2,
+      "hco3_meq": 3.1,
+      "cl_meq": 0.8
+    }
+  },
+  "intermediate_calculations": {
+    "soil_weight_kg_ha": "da × 1000 × (depth_cm/100) × 10000 = 1.35 × 1000 × 0.30 × 10000 = 4,050,000 kg/ha",
+    "formula_note": "PS (kg/ha) = bulk_density (g/cm³) × 1000 (kg/m³) × depth (m) × 10000 (m²/ha)",
+    "sum_N_kg_ha": "18 ppm × 4,050,000 / 1,000,000 = 72.9 kg/ha",
+    "sum_P2O5_kg_ha": "8.5 × 4,050,000 / 1,000,000 × 2.291 = 78.87 kg/ha",
+    "sum_K2O_kg_ha": "185 × 4,050,000 / 1,000,000 × 1.205 = 902.85 kg/ha",
+    "N_mineralised_kg_ha": "PS × (MOS/100) × 0.55 × 0.10 × 0.02 = 4050000 × 0.021 × 0.55 × 0.10 × 0.02 = 93.555 kg/ha"
+  },
+  "results": {
+    "macros": {
+      "N": {
+        "sum_kg_ha": 72.9,
+        "dem_kg_ha": 330.0,
+        "ef": 1.2,
+        "resultado": -308.52,
+        "factor_ajuste": -1.0,
+        "dosis_kg_ha": 308.52,
+        "N_mineralizado_kg_ha": 93.555,
+        "MOO_kg_ha": 20.0,
+        "N_ajustado_kg_ha": 194.965,
+        "distribucion_pct": [4, 18, 28, 50],
+        "distribucion_kg_ha": {
+          "Siembra-9ª hoja": 7.8,
+          "Panícula": 35.1,
+          "Floración": 54.6,
+          "Madurez": 97.5
+        },
+        "interpretation": "Soil N supply (72.9 kg/ha) is far below crop demand (330 kg/ha) → full fertilizer dose required: 308.52 kg N/ha, minus mineralisation (93.6) and organic amendments (20) = 194.97 kg N/ha effective dose."
+      },
+      "P2O5": {
+        "sum_kg_ha": 78.87,
+        "dem_kg_ha": 120.0,
+        "ef": 1.5,
+        "resultado": -61.695,
+        "factor_ajuste": -1.0,
+        "dosis_kg_ha": 61.695,
+        "interpretation": "P soil supply below crop demand — fertilizer P required."
+      },
+      "K2O": {
+        "sum_kg_ha": 902.85,
+        "dem_kg_ha": 300.0,
+        "ef": 1.1,
+        "resultado": 663.135,
+        "factor_ajuste": 0.25,
+        "dosis_kg_ha": 165.784,
+        "interpretation": "K soil supply exceeds demand — residual credit applied (factorAjuste = 0.25)."
+      },
+      "S": {
+        "sum_kg_ha": 48.6,
+        "dem_kg_ha": 60.0,
+        "ef": 1.1,
+        "resultado": -12.54,
+        "factor_ajuste": -1.0,
+        "dosis_kg_ha": 12.54
+      }
+    },
+    "micros": {
+      "Zn": { "sum_g_ha": 3240.0, "dem_g_ha": 11.925, "foliar_recommended": false },
+      "B":  { "sum_g_ha": 1215.0, "dem_g_ha": 4.5,    "foliar_recommended": false },
+      "Fe": { "sum_g_ha": 33210.0,"dem_g_ha": 28.125,  "foliar_recommended": false }
+    },
+    "water_analysis": {
+      "sum_cationes_meq": 4.95,
+      "sum_aniones_meq": 5.50,
+      "balance_error_pct": 10.5,
+      "SAR": "0.9 / sqrt((2.8+1.1)/2) = 0.9 / 1.3964 = 0.644 (low, non-sodic)",
+      "dureza_grados_f": "(2.8+1.1) × 5 = 19.5 °f (moderately hard)",
+      "acido_sulfurico_ml_m3": "(3.1 × 49) / (1.83 × 0.98) = 84.7 mL/m³"
+    },
+    "alerts": [
+      { "level": "info",    "message": "HCO₃⁻ 3.1 meq/L — apply 84.7 mL H₂SO₄/m³ to acidify irrigation water." },
+      { "level": "info",    "message": "Balance iónico dudoso (10.5%) — verificar el análisis." },
+      { "level": "warning", "message": "B deficiente — incluir en programa foliar." }
+    ]
+  },
+  "validation": {
+    "soil_weight":  "1.35 × 1000 × 0.30 × 10000 = 4,050,000 kg/ha ✓",
+    "sum_N":        "18 × 4,050,000 / 1e6 = 72.9 kg/ha ✓",
+    "resultado_N":  "(72.9 - 330) × 1.2 = -308.52 ✓",
+    "dosis_N":      "max(0, -308.52 × -1.0) = 308.52 kg/ha ✓",
+    "N_mineralised":"4,050,000 × 0.021 × 0.55 × 0.10 × 0.02 = 93.555 kg/ha ✓",
+    "N_ajustado":   "308.52 - 93.555 - 20 = 194.965 kg/ha ✓"
+  }
+}

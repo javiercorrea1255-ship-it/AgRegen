@@ -1,0 +1,2 @@
+date,ndvi_mean,ndvi_min,ndvi_max,cloudy_pixel_percentage,valid_pixels,satellite,spatial_resolution_m,index_type,notes
+2026-04-26,0.4074,0.1163,0.6711,0.000013,2352,Sentinel-2,10,NDVI,Imagen real adquirida por el servicio de interpolación satelital; NDVI promedio ponderado por área de zona

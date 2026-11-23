@@ -1,0 +1,28 @@
+{
+  "type": "FeatureCollection",
+  "name": "SanJose_SoilSampling_21pts",
+  "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+  "features": [
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-102.979851, 20.380928] }, "properties": { "id": 1, "pH": 4.42, "CE_dSm": 0.16, "method": "1:2 water" } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-102.979638, 20.380772] }, "properties": { "id": 2, "pH": 4.40, "CE_dSm": 0.16, "method": "1:2 water" } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-102.979358, 20.380867] }, "properties": { "id": 3, "pH": 4.38, "CE_dSm": 0.15, "method": "1:2 water" } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-102.979873, 20.380606] }, "properties": { "id": 4, "pH": 4.28, "CE_dSm": 0.13, "method": "1:2 water" } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-102.980067, 20.380289] }, "properties": { "id": 5, "pH": 4.27, "CE_dSm": 0.16, "method": "1:2 water" } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-102.979873, 20.380022] }, "properties": { "id": 6, "pH": 4.20, "CE_dSm": 0.11, "method": "1:2 water" } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-102.980228, 20.379952] }, "properties": { "id": 7, "pH": 4.61, "CE_dSm": 0.21, "method": "1:2 water" } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-102.980324, 20.379585] }, "properties": { "id": 8, "pH": 4.34, "CE_dSm": 0.13, "method": "1:2 water" } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-102.980507, 20.379127] }, "properties": { "id": 9, "pH": 4.37, "CE_dSm": 0.17, "method": "1:2 water" } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-102.979444, 20.380545] }, "properties": { "id": 10, "pH": 4.22, "CE_dSm": 0.18, "method": "1:2 water" } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-102.979723, 20.380364] }, "properties": { "id": 11, "pH": 4.35, "CE_dSm": 0.15, "method": "1:2 water" } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-102.979568, 20.380123] }, "properties": { "id": 12, "pH": 4.32, "CE_dSm": 0.15, "method": "1:2 water" } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-102.979557, 20.379856] }, "properties": { "id": 13, "pH": 4.13, "CE_dSm": 0.87, "method": "1:2 water" } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-102.979986, 20.379696] }, "properties": { "id": 14, "pH": 4.65, "CE_dSm": 0.21, "method": "1:2 water" } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-102.979632, 20.379147] }, "properties": { "id": 15, "pH": 4.27, "CE_dSm": 0.15, "method": "1:2 water" } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-102.980228, 20.379298] }, "properties": { "id": 16, "pH": 4.64, "CE_dSm": 0.16, "method": "1:2 water" } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-102.979927, 20.378987] }, "properties": { "id": 17, "pH": 4.41, "CE_dSm": 0.20, "method": "1:2 water" } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-102.980249, 20.378911] }, "properties": { "id": 18, "pH": 4.82, "CE_dSm": 0.20, "method": "1:2 water" } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-102.979863, 20.379349] }, "properties": { "id": 19, "pH": 4.45, "CE_dSm": 0.16, "method": "1:2 water" } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-102.979740, 20.378790] }, "properties": { "id": 20, "pH": 5.03, "CE_dSm": 0.13, "method": "1:2 water" } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-102.979670, 20.379575] }, "properties": { "id": 21, "pH": 4.47, "CE_dSm": 0.12, "method": "1:2 water" } }
+  ]
+}

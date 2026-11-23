@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0",
+  "index": "NDVI",
+  "unit": "kg N/ha",
+  "bands": [
+    { "upperExclusive": 0.20, "dose": 80, "label": "corrección" },
+    { "upperExclusive": 0.40, "dose": 50, "label": "subóptimo" },
+    { "upperExclusive": 0.50, "dose": 40, "label": "mantenimiento moderado" },
+    { "upperExclusive": 0.55, "dose": 30, "label": "mantenimiento" },
+    { "upperExclusive": null, "dose": 20, "label": "mantenimiento mínimo" }
+  ]
+}

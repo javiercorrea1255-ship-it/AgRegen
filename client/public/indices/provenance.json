@@ -1,0 +1,141 @@
+{
+  "source": "Sentinel-2 L2A (COPERNICUS/S2_SR_HARMONIZED via Google Earth Engine)",
+  "parcelBounds": [
+    [
+      -60.55,
+      -33.55
+    ],
+    [
+      -60.45,
+      -33.55
+    ],
+    [
+      -60.45,
+      -33.45
+    ],
+    [
+      -60.55,
+      -33.45
+    ],
+    [
+      -60.55,
+      -33.55
+    ]
+  ],
+  "region": "Pampa húmeda — Buenos Aires, Argentina (test parcel)",
+  "imageDate": "2024-03-06",
+  "generatedAt": "2026-04-18T00:17:23.531Z",
+  "indices": {
+    "ndvi": {
+      "bytes": 228976,
+      "vis": {
+        "min": 0,
+        "max": 1,
+        "palette": [
+          "#9ca3af",
+          "#fef3c7",
+          "#bef264",
+          "#65a30d",
+          "#166534"
+        ]
+      }
+    },
+    "evi": {
+      "bytes": 21484,
+      "vis": {
+        "min": 0,
+        "max": 1,
+        "palette": [
+          "#9ca3af",
+          "#fef3c7",
+          "#bef264",
+          "#65a30d",
+          "#166534"
+        ]
+      }
+    },
+    "ndmi": {
+      "bytes": 179298,
+      "vis": {
+        "min": -0.4,
+        "max": 0.4,
+        "palette": [
+          "#fca5a5",
+          "#fde68a",
+          "#bef264",
+          "#22d3ee",
+          "#0891b2"
+        ]
+      }
+    },
+    "ndwi": {
+      "bytes": 19092,
+      "vis": {
+        "min": -0.5,
+        "max": 0.5,
+        "palette": [
+          "#fef3c7",
+          "#bef264",
+          "#22d3ee",
+          "#0891b2",
+          "#1e3a8a"
+        ]
+      }
+    },
+    "savi": {
+      "bytes": 48852,
+      "vis": {
+        "min": 0,
+        "max": 1,
+        "palette": [
+          "#9ca3af",
+          "#fef3c7",
+          "#bef264",
+          "#65a30d",
+          "#166534"
+        ]
+      }
+    },
+    "msi": {
+      "bytes": 231539,
+      "vis": {
+        "min": 0.4,
+        "max": 1.6,
+        "palette": [
+          "#22d3ee",
+          "#bef264",
+          "#fde68a",
+          "#fca5a5"
+        ]
+      }
+    },
+    "nbr": {
+      "bytes": 265691,
+      "vis": {
+        "min": -0.5,
+        "max": 0.8,
+        "palette": [
+          "#7f1d1d",
+          "#fca5a5",
+          "#fde68a",
+          "#bef264",
+          "#166534"
+        ]
+      }
+    },
+    "bsi": {
+      "bytes": 282084,
+      "vis": {
+        "min": -0.5,
+        "max": 0.5,
+        "palette": [
+          "#166534",
+          "#bef264",
+          "#fde68a",
+          "#fca5a5",
+          "#78350f"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Zonas de prueba</name>
+    <Placemark>
+      <name>Zona Alta</name>
+      <ExtendedData>
+        <Data name="value"><value>3.2</value></Data>
+        <Data name="dose_per_ha"><value>180</value></Data>
+      </ExtendedData>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+              -58.4,-34.6,0
+              -58.39,-34.6,0
+              -58.39,-34.59,0
+              -58.4,-34.59,0
+              -58.4,-34.6,0
+            </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+    <Placemark>
+      <name>Zona Baja</name>
+      <ExtendedData>
+        <Data name="value"><value>1.1</value></Data>
+        <Data name="dose_per_ha"><value>80</value></Data>
+      </ExtendedData>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+              -58.39,-34.6,0
+              -58.38,-34.6,0
+              -58.38,-34.59,0
+              -58.39,-34.59,0
+              -58.39,-34.6,0
+            </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+  </Document>
+</kml>

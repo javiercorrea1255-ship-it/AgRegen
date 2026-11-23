@@ -1,0 +1,28 @@
+{
+  "type": "FeatureCollection",
+  "name": "SanJose_FieldBoundary",
+  "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-102.980650, 20.378700],
+          [-102.979200, 20.378700],
+          [-102.979200, 20.381050],
+          [-102.980650, 20.381050],
+          [-102.980650, 20.378700]
+        ]]
+      },
+      "properties": {
+        "name": "San José pilot field",
+        "location": "Jalisco, México",
+        "area_ha_approx": 3.24,
+        "crs": "EPSG:4326",
+        "source": "Digitized field boundary (SHP) provided by producer",
+        "note": "Boundary approximated from a producer-supplied shapefile. The original upload is not distributed."
+      }
+    }
+  ]
+}

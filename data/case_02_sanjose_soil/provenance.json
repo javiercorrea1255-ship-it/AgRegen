@@ -1,0 +1,35 @@
+{
+  "provenance_version": "1.0",
+  "data_source": "AgRegen 5.0 — field data uploaded by producer via platform interface",
+  "collection_date": "2026",
+  "provided_by": "Producer (identity withheld), San José pilot field, Jalisco, México",
+  "provided_format": "CSV (comma-delimited) + Shapefile (.shp/.shx/.dbf/.prj)",
+  "original_files": {
+    "sampling": "CSV",
+    "boundary": "Shapefile (WGS84)",
+    "distribution": "Original uploads and filenames are not distributed."
+  },
+  "transformations_applied": [
+    "CSV column rename: 'Longitud' -> 'Longitud', 'Latitud' -> 'Latitud', 'pH ' -> 'pH' (trimmed trailing space), 'CE' -> 'CE_dSm'",
+    "GeoJSON conversion: CSV rows mapped to GeoJSON Point features (coordinates: [Longitud, Latitud])",
+    "Field boundary: approximated from shapefile bounding box + 30m buffer; exact boundary from producer shapefile",
+    "No pH or CE values were modified, rounded, or recalculated"
+  ],
+  "data_quality_notes": [
+    "Point 13 (id=13, lon=-102.979557, lat=20.379856): CE = 0.87 dS/m is a notable outlier vs field mean (0.193). Retained as-is — may indicate localized salinity or measurement anomaly.",
+    "pH range 4.13–5.03 is consistently acidic across the field — no missing values.",
+    "21 of 21 points have complete pH and CE measurements.",
+    "Method column ('1:2 water') confirms all samples prepared at 1:2 soil:water ratio per NOM-021-SEMARNAT-2000."
+  ],
+  "idw_parameters": {
+    "power": 2,
+    "formula": "z(x) = sum(w_i * z_i) / sum(w_i), where w_i = 1 / d_i^p",
+    "boundary_masking": "Grid cells outside field polygon masked (alpha=0)",
+    "grid_resolution": "30 x 36 cells (≈ 30 m spacing)"
+  },
+  "reproducibility": "All values reproducible by running: node demo/run_sanjose_workflow.js",
+  "anonymization": {
+    "applied": "partial",
+    "note": "Producer first name retained. Exact field location (coordinates) unchanged. No contact details, land registry, or financial data included."
+  }
+}

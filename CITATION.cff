@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the version you used and its Zenodo DOI when available."
+type: software
+title: "AgRegen: open-source web platform for site-specific nutrient management"
+version: "1.1.0"
+license: MIT
+repository-code: "https://github.com/javiercorrea1255-ship-it/AgRegen"
+authors:
+  - family-names: "Correa Islas"
+    given-names: "Javier de Jesús"
+    affiliation: "CIESTAAM–Universidad Autónoma Chapingo"
+    orcid: "https://orcid.org/0000-0002-5948-0315"
+  - family-names: "Muñoz Rodríguez"
+    given-names: "Manrrubio"
+    affiliation: "CIESTAAM–Universidad Autónoma Chapingo"
+  - family-names: "Martínez González"
+    given-names: "Enrique Genaro"
+    affiliation: "CIESTAAM–Universidad Autónoma Chapingo"
+  - family-names: "Altamirano Cárdenas"
+    given-names: "J. Reyes"
+    affiliation: "CIESTAAM–Universidad Autónoma Chapingo"
+  - family-names: "Ontiveros Capurata"
+    given-names: "Ronald Ernesto"
+    affiliation: "Instituto Mexicano de Tecnología del Agua (IMTA)"
+abstract: >-
+  A Spanish-language web platform for satellite and soil-based management
+  zoning, geostatistical interpolation, and agronomic calculations. The
+  release includes three offline reproducible cases and a versioned
+  deterministic NDVI-based nitrogen prescription engine.

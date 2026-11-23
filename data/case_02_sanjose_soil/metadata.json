@@ -1,0 +1,68 @@
+{
+  "dataset_id": "case_02_sanjose_soil_ph_ce_20260508",
+  "dataset_version": "1.0.0",
+  "title": "Soil pH and Electrical Conductivity Interpolation — San José Field, Jalisco, México",
+  "description": "Reproducible dataset for IDW spatial interpolation of soil pH and electrical conductivity (CE) from 21 georeferenced sampling points. Includes field boundary, raw data, interpolation configuration, and IDW results validated against the AgRegen 5.0 geo-service.",
+  "field": {
+    "name": "San José pilot field",
+    "location": "Jalisco, México",
+    "coordinates_center": [-102.9800, 20.3799],
+    "area_ha_approx": 3.24,
+    "land_use": "Cropland"
+  },
+  "sampling": {
+    "n_points": 21,
+    "variables": ["pH", "CE_dSm"],
+    "method": "1:2 soil:water suspension",
+    "lab_standard": "NOM-021-SEMARNAT-2000",
+    "collection_date": "2026",
+    "grid_type": "Systematic with field adjustments",
+    "approximate_spacing_m": 30
+  },
+  "variables": {
+    "pH": {
+      "unit": "dimensionless",
+      "method": "Potentiometric, 1:2 soil:water suspension",
+      "min": 4.13,
+      "max": 5.03,
+      "mean": 4.430,
+      "sd": 0.204,
+      "interpretation": "All samples are strongly to very strongly acidic (pH < 5.5). Liming required.",
+      "optimal_range": [6.0, 7.0]
+    },
+    "CE_dSm": {
+      "unit": "dS/m",
+      "method": "Conductimetric, 1:2 soil:water suspension",
+      "min": 0.11,
+      "max": 0.87,
+      "mean": 0.193,
+      "sd": 0.160,
+      "interpretation": "Mean CE is non-saline. Outlier at point 13 (CE = 0.87 dS/m) warrants investigation.",
+      "optimal_range": [0.0, 2.0]
+    }
+  },
+  "interpolation": {
+    "method": "IDW (Inverse Distance Weighting)",
+    "power": 2,
+    "k_neighbors": "all",
+    "grid_resolution": 30,
+    "grid_cells_approx": 1296,
+    "software": "AgRegen 5.0 geo-service (Python FastAPI + NumPy/SciPy)",
+    "endpoint": "POST /api/geo/interpolate",
+    "algorithm_reference": "Shepard (1968) — A two-dimensional interpolation function for irregularly-spaced data"
+  },
+  "zones": {
+    "n_zones": 3,
+    "method": "Quantile classification",
+    "zone_labels": ["Muy ácido (pH < 4.30)", "Ácido moderado (4.30 – 4.55)", "Menos ácido (> 4.55)"],
+    "recommendation": "Apply agricultural lime (CaCO₃) at rates proportional to acidity deficit"
+  },
+  "platform": {
+    "name": "AgRegen 5.0",
+    "version": "5.0.0",
+    "url": "https://ag-regen.com",
+    "module": "Variable Rate Management (MVZ) — Soil Sampling + Interpolation"
+  },
+  "license": "CC-BY-4.0",
+  "created_at": "2026-05-08"
+}

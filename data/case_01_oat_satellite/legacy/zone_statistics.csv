@@ -1,0 +1,7 @@
+zone_id,zone_label,area_ha,ndvi_mean,ndvi_sd,ndvi_min,ndvi_max,color_hex,source,index_type,image_date,satellite,spatial_resolution_m
+0,Zona 1,1.3775,0.1600,0.0515,,, #d73027,satellite_index,ndvi,2026-04-26,Sentinel-2,10
+1,Zona 2,1.3932,0.1626,0.0441,,, #f46d43,satellite_index,ndvi,2026-04-26,Sentinel-2,10
+2,Zona 3,2.5285,0.4351,0.0274,,, #fdae61,satellite_index,ndvi,2026-04-26,Sentinel-2,10
+3,Zona 4,3.2430,0.4658,0.0305,,, #a6d96a,satellite_index,ndvi,2026-04-26,Sentinel-2,10
+4,Zona 5,2.1091,0.4852,0.0278,,, #1a9850,satellite_index,ndvi,2026-04-26,Sentinel-2,10
+5,Zona 6,2.0750,0.5316,0.0316,,, #313695,satellite_index,ndvi,2026-04-26,Sentinel-2,10

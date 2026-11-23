@@ -1,0 +1,7 @@
+zone_id,zone_label,area_ha,ndvi_mean,ndvi_sd,amendment,rate_kg_ha,dose_unit,total_kg,cost_usd,application_method,timing,rationale
+0,Zona 1,1.3775,0.1600,0.0515,Nitrógeno (N),80,kg N/ha,110.2000,82.65,,,Motor determinista NDVI v1.0.0: media 0.1600; banda corrección; 80 kg N/ha. El NDVI no diagnostica deficiencia de N.
+1,Zona 2,1.3932,0.1626,0.0441,Nitrógeno (N),80,kg N/ha,111.4560,83.59,,,Motor determinista NDVI v1.0.0: media 0.1626; banda corrección; 80 kg N/ha. El NDVI no diagnostica deficiencia de N.
+2,Zona 3,2.5285,0.4351,0.0274,Nitrógeno (N),40,kg N/ha,101.1400,75.86,,,Motor determinista NDVI v1.0.0: media 0.4351; banda mantenimiento moderado; 40 kg N/ha. El NDVI no diagnostica deficiencia de N.
+3,Zona 4,3.2430,0.4658,0.0305,Nitrógeno (N),40,kg N/ha,129.7200,97.29,,,Motor determinista NDVI v1.0.0: media 0.4658; banda mantenimiento moderado; 40 kg N/ha. El NDVI no diagnostica deficiencia de N.
+4,Zona 5,2.1091,0.4852,0.0278,Nitrógeno (N),40,kg N/ha,84.3640,63.27,,,Motor determinista NDVI v1.0.0: media 0.4852; banda mantenimiento moderado; 40 kg N/ha. El NDVI no diagnostica deficiencia de N.
+5,Zona 6,2.0750,0.5316,0.0316,Nitrógeno (N),30,kg N/ha,62.2500,46.69,,,Motor determinista NDVI v1.0.0: media 0.5316; banda mantenimiento; 30 kg N/ha. El NDVI no diagnostica deficiencia de N.

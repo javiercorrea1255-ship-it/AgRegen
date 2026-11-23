@@ -1,0 +1,52 @@
+{
+  "type": "FeatureCollection",
+  "name": "field_boundary",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -103.4342337689982,
+              24.1218143647924
+            ],
+            [
+              -103.4311071039357,
+              24.12087339059424
+            ],
+            [
+              -103.429644950901,
+              24.12425326265867
+            ],
+            [
+              -103.4326663135824,
+              24.12515400790805
+            ],
+            [
+              -103.4342337689982,
+              24.1218143647924
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "field_id": "17a125b8-b6b5-4744-94b5-3165c0d969fc",
+        "name": "Parcela piloto avena, Miguel Auza",
+        "location": "Miguel Auza, Ejido Miguel Auza, Zacatecas, México",
+        "area_ha_registered": 13.23,
+        "area_ha_computed": 12.7263,
+        "crop": "Avena",
+        "variety": null,
+        "phenological_stage": "cosecha",
+        "soil_type": "franco-arenoso",
+        "irrigation_system": "goteo",
+        "planting_date": "2026-01-28",
+        "centroid_lat": 24.1230238,
+        "centroid_lon": -103.431913,
+        "epsg": 4326
+      }
+    }
+  ]
+}

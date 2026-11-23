@@ -1,0 +1,82 @@
+{
+  "provenance_version": "1.0",
+  "database_source": "AgRegen 5.0 — PostgreSQL (production, self-hosted)",
+  "extraction_timestamp": "2026-05-04T06:00:00.000Z",
+  "extracted_by": "AgRegen 5.0 internal export pipeline",
+  "original_ids": {
+    "field_id": "17a125b8-b6b5-4744-94b5-3165c0d969fc",
+    "zone_set_id": "sat_1777860307998_v65y0g",
+    "zone_ids": [
+      "55a2e28f-4d20-4437-b7c0-776b335b208a",
+      "c5e24ec3-7e1a-4240-8104-574afaa55f5b",
+      "da25663d-e569-4799-ae63-43cdef09e8ec",
+      "eca1940d-3074-4521-823a-ccaeb2834cc3",
+      "5570df3b-9886-4a00-a8c4-6a3d20ccf45b",
+      "28c9da8c-1575-4da9-a2a2-417f6c8c9992"
+    ],
+    "prescription_ids": [
+      "78a0f577-2625-490b-876d-08f0095e5ecc",
+      "e531ecd2-fcc5-43b3-a45b-3fbfde6c4a73",
+      "ef3fc2a6-6d18-4991-aa75-49769ac16976",
+      "d986ad8f-da71-48c1-83f5-24cc84a1f718",
+      "180c3595-be66-4a4b-acd8-7f425f6ebe22",
+      "fb180f2d-507d-4140-9850-89ae4e12f6b7"
+    ],
+    "campaign_id": null,
+    "interpolation_id": null
+  },
+  "queries_used": [
+    {
+      "purpose": "Retrieve field boundary and metadata",
+      "table": "parcels",
+      "filter": "parcels.id = '17a125b8-b6b5-4744-94b5-3165c0d969fc'"
+    },
+    {
+      "purpose": "Retrieve management zones with statistics",
+      "table": "management_zones",
+      "filter": "zone_set_id = 'sat_1777860307998_v65y0g'",
+      "order": "zone_index ASC"
+    },
+    {
+      "purpose": "Retrieve variable rate prescriptions",
+      "table": "zone_prescriptions",
+      "join": "management_zones ON zone_prescriptions.zone_id = management_zones.id",
+      "filter": "management_zones.zone_set_id = 'sat_1777860307998_v65y0g'"
+    },
+    {
+      "purpose": "Retrieve satellite image metadata",
+      "table": "management_zones.source_metadata (JSONB)",
+      "filter": "zone_set_id = 'sat_1777860307998_v65y0g'",
+      "note": "source_metadata contains: imageDate, indexType, scaleM, validPixels, cloudyPixelPercentage, vmin, vmax, method, nZonesActual"
+    }
+  ],
+  "satellite_pipeline": {
+    "provider": "Google Earth Engine (GEE)",
+    "collection": "COPERNICUS/S2_SR_HARMONIZED",
+    "filter_dates": [
+      "2026-04-01",
+      "2026-04-30"
+    ],
+    "cloud_filter_pct": 5,
+    "band_formula": "NDVI = (B8 - B4) / (B8 + B4)",
+    "image_acquired": "2026-04-26",
+    "image_id": "Sentinel-2 SR tile covering 24.123°N, 103.432°W"
+  },
+  "transformations_applied": [
+    "Coordinate conversion: [lat,lng] → GeoJSON [lng,lat] for field boundary polygon",
+    "Zone polygon: exported as-is from management_zones.polygon_geojson (MultiPolygon, EPSG:4326)",
+    "NDVI mean (metadata): area-weighted average computed from 6-zone statistics",
+    "No values modified, rounded, or recomputed — all figures match production DB exactly"
+  ],
+  "data_anonymization": {
+    "applied": true,
+    "note": "Name replaced and account ID omitted; parcel geometry preserved."
+  },
+  "notes_on_data_cleaning": [
+    "NDVI timeseries contains only one observation (2026-04-26) — no temporal series available for this field at extraction time.",
+    "Field registered area (13.23 ha) differs from zone-computed area (12.7263 ha) due to rasterization at 10m pixel resolution — normal discrepancy for irregular polygons.",
+    "Zone min/max NDVI values not stored in DB per-zone; only field-level vmin/vmax from source_metadata are available.",
+    "Prescription amounts (total_kg) computed as dose_per_ha × area_ha, rounded to 2 decimal places by the platform."
+  ],
+  "reproducibility_guarantee": "Numeric results preserved from the historical export; identifying fields were redacted."
+}

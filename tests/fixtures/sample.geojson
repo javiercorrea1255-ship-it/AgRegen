@@ -1,0 +1,33 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "value": 2.5, "label": "Media", "dose_per_ha": 120 },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-58.4, -34.6],
+          [-58.39, -34.6],
+          [-58.39, -34.59],
+          [-58.4, -34.59],
+          [-58.4, -34.6]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "value": 1.2, "label": "Baja", "dose_per_ha": 60 },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-58.39, -34.6],
+          [-58.38, -34.6],
+          [-58.38, -34.59],
+          [-58.39, -34.59],
+          [-58.39, -34.6]
+        ]]
+      }
+    }
+  ]
+}

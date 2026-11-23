@@ -1,0 +1,20 @@
+{
+  "title": "AgRegen: open-source web platform for site-specific nutrient management",
+  "version": "1.1.0",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "mit",
+  "description": "<p>AgRegen is a Spanish-language web platform for site-specific nutrient management. Three offline reproducible cases cover deterministic NDVI-based nitrogen prescriptions for oat, soil pH and electrical conductivity interpolation, and agronomic calculators. The datasets under data/ are licensed separately under CC BY 4.0.</p>",
+  "creators": [
+    {"name": "Correa Islas, Javier de Jesús", "affiliation": "CIESTAAM–Universidad Autónoma Chapingo", "orcid": "0000-0002-5948-0315"},
+    {"name": "Muñoz Rodríguez, Manrrubio", "affiliation": "CIESTAAM–Universidad Autónoma Chapingo"},
+    {"name": "Martínez González, Enrique Genaro", "affiliation": "CIESTAAM–Universidad Autónoma Chapingo"},
+    {"name": "Altamirano Cárdenas, J. Reyes", "affiliation": "CIESTAAM–Universidad Autónoma Chapingo"},
+    {"name": "Ontiveros Capurata, Ronald Ernesto", "affiliation": "Instituto Mexicano de Tecnología del Agua (IMTA)"}
+  ],
+  "related_identifiers": [
+    {"scheme": "url", "identifier": "https://github.com/javiercorrea1255-ship-it/AgRegen", "relation": "isSupplementTo"},
+    {"scheme": "doi", "identifier": "10.5281/zenodo.20062527", "relation": "isNewVersionOf"}
+  ],
+  "keywords": ["precision agriculture", "NDVI", "site-specific nutrient management", "soil interpolation", "Mexico", "SoftwareX"]
+}
